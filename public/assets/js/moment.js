@@ -3,12 +3,12 @@ var currentTime = new Date().getHours();
 console.log(currentTime)
 if (5 <= currentTime && currentTime < 10) {
     
-        $("#background").css("background-image", "url(/assets/images/backgrounds/calm-day.png)");
+        $("#background").css("background-image", "url(/assets/images/backgrounds/calm-morning.png)");
 }
 //day image for background
 else if (10 <= currentTime && currentTime < 16){
    
-        $("#background").css("background-image", "url(/assets/images/backgrounds/calm-morning.png)");
+        $("#background").css("background-image", "url(/assets/images/backgrounds/calm-day.png)");
    
 }
 //evening image for background

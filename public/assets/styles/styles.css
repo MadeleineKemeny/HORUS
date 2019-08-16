@@ -92,27 +92,24 @@ ul {
  
 
 .img-circle {
-  float: left;
-  width: 46px;
-  height: 46px;
-  margin: 10px;
-  border-width: 5px;
   border-radius: 50px;
+  
+}
+
+#icon1, #icon2, #icon3, #icon4{
+  padding: 0;
+  margin: 10px;
+  border-radius: 50px;
+  /* box-shadow: 0 4px 4px 0 rgba(252, 0, 0, 0.6), 0 6px 20px 0 rgba(252, 0, 0, 0.6); */
   box-shadow: 0 4px 4px 0 rgba(0, 252, 0, 0.6), 0 6px 20px 0 rgba(0, 252, 0, 0.6);
 }
 
-.img-circle:hover {
-  /* content: url('http://www.furrytalk.com/wp-content/uploads/2010/05/2.jpg');
-  height: 70px;
-  width: 120px; */
-  float: left;
-  width: 46px;
-  height: 46px;
+#icon1:hover, #icon2:hover, #icon3:hover, #icon4:hover {
+  padding: 0;
   margin: 10px;
-  border-width: 5px;
   border-radius: 50px;
   box-shadow: 0 4px 4px 0 rgba(252, 0, 0, 0.6), 0 6px 20px 0 rgba(252, 0, 0, 0.6);
-
+  /* box-shadow: 0 4px 4px 0 rgba(0, 252, 0, 0.6), 0 6px 20px 0 rgba(0, 252, 0, 0.6); */
 }
 
  li {
