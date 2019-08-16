@@ -3,6 +3,8 @@
 
 # Horus: Keeping an eye on your home
 
+
+
 ## Abstract
 
 Horus is a sensor-based home monitoring application. It provides the user with real-time monitoring utilizing various inputs from your home through remote sensors (e.g. water, gas, motion, temperature). In the event that a sensor is triggered, an API is utilized to notify the registered user. From the dashboard application, the user can check the status, test, or reset the sensors. Additionally, a weather feed is provided to the user for predictive action at their discretion.
@@ -13,9 +15,11 @@ Horus is a sensor-based home monitoring application. It provides the user with r
 https://docs.google.com/presentation/d/1UPXZC-54G3h69Xkw4jP5oVwiyCBmGcuaPr-_2oyEcQc/edit?usp=sharing
 
 
+
 ## Flow Chart
 
 ![Flow](./public/assets/images/Flow.PNG)
+
 
 
 ## Software Requirements
@@ -23,6 +27,7 @@ https://docs.google.com/presentation/d/1UPXZC-54G3h69Xkw4jP5oVwiyCBmGcuaPr-_2oyE
 |     Front-end       |       Back-end     |
 |:------------------- |:------------------ |
 | <ul><li>HTML5</li><li>Bootstrap</li><li>JavaScript</li><li>jQuery</li><li>Handlebars.js</li></ul>| <ul><li>Node.js</li><li>Express</li><li>Python</li><li>Raspbian/Linux</li><li>MySQL</li><li>Heroku</li></ul> |
+
 
 
 ## Packages & Libraries
@@ -41,6 +46,7 @@ https://docs.google.com/presentation/d/1UPXZC-54G3h69Xkw4jP5oVwiyCBmGcuaPr-_2oyE
 
 
 ### Back End:
+
 - Node
 - Express
 
@@ -81,11 +87,13 @@ https://docs.google.com/presentation/d/1UPXZC-54G3h69Xkw4jP5oVwiyCBmGcuaPr-_2oyE
 - Jumper Wires
 
 ###
+
 - [Python Standard Library] (https://docs.python.org/3/library/)
 - Adobe Creative Cloud: Photoshop and Illustrator
  
 
 ## Contributors
+
 - [Davis](https://github.com/daveyjonezz)
 - [Jenny](https://github.com/jenshin75)
 - [Madeleine](https://github.com/MadeleineKemeny)
@@ -95,6 +103,7 @@ https://docs.google.com/presentation/d/1UPXZC-54G3h69Xkw4jP5oVwiyCBmGcuaPr-_2oyE
 
 
 ## Notes
+
 ![alt text](public/assets/images/mySQLworkbench.jpg)
 
 
