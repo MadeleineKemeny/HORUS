@@ -104,7 +104,7 @@ https://docs.google.com/presentation/d/1UPXZC-54G3h69Xkw4jP5oVwiyCBmGcuaPr-_2oyE
 
 ## Notes
 
-![Flow](./public/assets/images/Flow.PNG)
+![sensor db](./public/assets/images/sensor db.png
 
 
 
