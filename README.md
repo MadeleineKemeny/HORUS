@@ -104,7 +104,7 @@ https://docs.google.com/presentation/d/1UPXZC-54G3h69Xkw4jP5oVwiyCBmGcuaPr-_2oyE
 
 ## Notes
 
-![alt text](public/assets/images/mySQLworkbench.jpg)
+![Flow](./public/assets/images/Flow.PNG)
 
 
 
