@@ -1,0 +1,90 @@
+<div class="container">
+  {{!-- logo panel --}}
+  <div class="row">
+    <div class="col-md-4">
+      <div class="row">
+        <img src="/assets/images/logos/full-logo-tag.png" id="logo" alt="logo and tagline">
+      </div>
+      <div class="row">
+        <ul>
+        
+          <li><strong>Client: </strong>{{firstName}} {{lastName}}</li>
+          <li><strong>Zip code: </strong>{{location}}</li>
+          <li><strong>Email: </strong>{{email}}</li>
+          <li><strong>Phone: </strong>{{phoneNum}}</li>
+        </ul>
+      </div>
+      <br>
+      {{!-- user control buttons --}}
+      <div class="row" id="user-buttons">
+        <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+          <div class="btn-group mr-2" role="group" aria-label="First button">
+            <button type="button" class="user-controls" data-id="{{id}}">UPDATE<br>PROFILE</button>
+          </div>
+          <div class="btn-group mr-2" role="group" aria-label="Second button">
+            <button class="user-controls" id="test-send-message" data-id="{{phoneNum}}">TEST<br>SENSORS</button>
+          </div>
+          <div class="btn-group mr-2" role="group" aria-label="Second button">
+            <button class="user-controls" id="update-user-profile">RESET<br>SENSOR</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{!-- main image panel --}}
+    <div class="col-md-8">
+      <div class="row" id="background">
+        <div id="weatherbox">
+          <!-- Weather tabs -->
+          <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="tab" href="#panel7" id="loginTab" role="tab"><i class="fas 
+                fa-sun mr-1"></i>
+                <strong>Current Weather Conditions</strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" id="registerTab" href="#panel8" role="tab"><i
+                  class="fas fa-calendar-plus"></i>
+                <strong>Upcoming Forecast</strong></a>
+            </li>
+          </ul>
+          <br>
+          <!-- Tab panels -->
+          <div class="tab-content">
+            <!--Panel 7-->
+            <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+              {{!-- <p class="h4 mb-4">Current Weather Conditions:</p> --}}
+              <p><strong>Temperature:</strong> <span id="currentTemp"></span>F</p>
+              <p><strong>Conditions:</strong> <span id="currentConditions"></span></p>
+              <p><strong>Humidity:</strong> <span id="humidity"></span>%</p>
+              <p><strong>Wind Speed:</strong> <span id="wind"></span></p>
+            </div>
+            <!--Panel 8-->
+            <div class="tab-pane fade in show " id="panel8" role="tabpanel">
+              {{!-- <p class="h4 mb-4">Upcoming Forecast</p> --}}
+            </div>
+            <!--/.Panel 8-->
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        {{!-- icons --}}
+        <div class="img-circle" id="icon1" >
+          
+          <img   src="/assets/images/button-icons/air.png">
+        
+
+        </div>
+        <div class="img-circle" id="icon2">
+          <img  class="status" src="/assets/images/button-icons/fire.png">
+        </div>
+        <div class="img-circle" id="icon3">
+          <img src="/assets/images/button-icons/earth.png">
+        </div>
+        <div class="img-circle" id="icon4">
+          <img src="/assets/images/button-icons/water.png" id="icon">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/js/moment.js"></script>

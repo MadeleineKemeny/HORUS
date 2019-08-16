@@ -1,0 +1,138 @@
+<!--Modal: Login / Register Form-->
+<div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog cascading-modal" role="document">
+    <!--Content-->
+
+    <div class="modal-content">
+      <!--Modal cascading tabs-->
+      <div class="modal-c-tabs">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#panel7" id="loginTab" role="tab"><i
+                class="fas fa-user mr-1"></i>
+              Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" id="registerTab" href="#panel8" role="tab"><i
+                class="fas fa-user-plus mr-1"></i>
+              Register</a>
+          </li>
+        </ul>
+        <!-- Tab panels -->
+        <div class="tab-content">
+          <!--Panel 7-->
+          <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+            <form class="text-center border border-light p-5" action="#!">
+              <p class="h4 mb-4">Sign in</p>
+              <!-- Email -->
+              <input type="email" id="emaillogin" class="form-control mb-4" placeholder="E-mail">
+              <!-- Password -->
+              <input type="password" id="passlogin" class="form-control mb-4" placeholder="Password">
+              <div class="d-flex justify-content-around">
+                <div>
+                  <!-- Remember me -->
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="consent">
+                    <label class="custom-control-label" for="consent">Remember me</label>
+                  </div>
+                </div>
+                <div>
+                  <!-- Forgot password -->
+                  <a href="#">Forgot password?</a>
+                </div>
+              </div>
+              <!-- Sign in button -->
+              <button class="btn btn-#1B75BB btn-block my-4" id="login" type="submit">Sign in</button>
+              <!-- Register -->
+              <p>Not a member?
+                <a id="register" href="#">Register</a>
+              </p>
+              <!-- Social login -->
+              <p>or sign in with:</p>
+              <span class="modal-icon">
+                <i class="fab fa-facebook-f"></i>
+              </span>
+              <span class="modal-icon">
+                <i class="fab fa-twitter"></i>
+              </span>
+              <span class="modal-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </span>
+              <span class="modal-icon">
+                <i class="fab fa-github"></i>
+              </span>
+            </form>
+          </div>
+
+          <!--Panel 8-->
+          <div class="tab-pane fade" id="panel8" role="tabpanel">
+            <!--Body-->
+            <!-- Default form register -->
+            <form class="text-center border border-light p-5" action="#!">
+              <p class="h4 mb-4">Sign up</p>
+              <div class="form-row mb-4">
+                <div class="col">
+                  <!-- First name -->
+                  <input type="text" id="firstName" class="form-control" placeholder="First name">
+                </div>
+                <div class="col">
+                  <!-- Last name -->
+                  <input type="text" id="lastName" class="form-control" placeholder="Last name">
+                </div>
+              </div>
+              <!-- E-mail -->
+              <input type="email" id="email" class="form-control mb-4" placeholder="E-mail">
+              <!-- Password -->
+              <input type="password" id="password" class="form-control mb-4" placeholder="Password"
+                aria-describedby="defaultRegisterFormPasswordHelpBlock">
+              <input type="password" id="rep-password" class="form-control mb-4" placeholder="Re-enter Password"
+                aria-describedby="defaultRegisterFormPasswordHelpBlock">
+              <!-- Phone number -->
+              <input type="text" id="phoneNum" class="form-control mb-4" placeholder="Phone Number"
+                aria-describedby="defaultRegisterFormPhoneHelpBlock">
+              <input type="text" id="location" class="form-control mb-4" placeholder="Zip Code"
+                aria-describedby="defaultRegisterFormPasswordHelpBlock">
+              <!-- Consent -->
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="check1">
+                <label class="custom-control-label" for="check1">Check here to get text alerts</label>
+              </div>
+              <!-- Sign up button -->
+              <button class="btn btn-#1B75BB my-4 btn-block" type="submit" id="signup">Sign in</button>
+              <!-- Social register -->
+              <p>or sign up with:</p>
+              <span class="modal-icon">
+                <i class="fab fa-facebook-f"></i>
+              </span>
+              <span class="modal-icon">
+                <i class="fab fa-twitter"></i>
+              </span>
+              <span class="modal-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </span>
+              <span class="modal-icon">
+                <i class="fab fa-github"></i>
+              </span>
+              <hr>
+              <!-- Terms of service -->
+              <p>By clicking
+                <em>Sign up</em> you agree to our
+                <a href="#" target="_blank">terms of service</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Modal: Login / Register Form-->
+<div class="centered loginbox" >
+  <a href="" class="btn btn-rounded btn-lgmy-3" id="index-login" data-toggle="modal" data-target="#modalLRForm">
+    LOGIN/REGISTER
+  </a>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="assets/js/index.js"></script>
