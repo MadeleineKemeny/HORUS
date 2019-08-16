@@ -11,8 +11,8 @@ Horus is a sensor-based home monitoring application. It provides the user with r
 
 
 
-## Overview in slides
-https://docs.google.com/presentation/d/1UPXZC-54G3h69Xkw4jP5oVwiyCBmGcuaPr-_2oyEcQc/edit?usp=sharing
+## Overview
+- [Slideshow](https://docs.google.com/presentation/d/1UPXZC-54G3h69Xkw4jP5oVwiyCBmGcuaPr-_2oyEcQc/edit?usp=sharing)
 
 
 
