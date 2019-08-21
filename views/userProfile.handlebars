@@ -1,0 +1,78 @@
+<div class="container scroll">
+    {{!-- logo panel --}}
+    <div class="row">
+        <div class="col-md-4">
+            <div class="row">
+                <img src="/assets/images/logos/full-logo-tag.png" id="logo" alt="logo and tagline">
+            </div>
+            <div class="row">
+                <ul>
+
+                    <li><strong>Client: </strong>{{firstName}} {{lastName}}</li>
+                    <li><strong>Zip code: </strong>{{location}}</li>
+                    <li><strong>Email: </strong>{{email}}</li>
+                    <li><strong>Phone: </strong>{{phoneNum}}</li>
+                </ul>
+            </div>
+            <br>
+            {{!-- add onlick to user control buttons --}}
+            <div class="row" id="user-buttons">
+                <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+                    <div class="btn-group mr-2" role="group" aria-label="First button">
+                        <button type="button" class="user-controls" data-id="{{id}}">RETURN TO<br>HOME</button>
+                    </div>
+                    <div class="btn-group mr-2" role="group" aria-label="Second button">
+                        <button class="user-controls" id="test-send-message"
+                            data-id="{{phoneNum}}">TEST<br>SENSORS</button>
+                    </div>
+                    <div class="btn-group mr-2" role="group" aria-label="Second button">
+                        <button class="user-controls" id="update-user-profile">RESET<br>SENSOR</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{!-- update user profile form --}}
+        <div class="col-md-8">
+            <div class="row">
+                <div id="profile">
+                    <h4>UPDATE YOUR PROFILE</h4>
+                    <form action="/action_page.php">
+                        <div class="form-group">
+                            <label for="name1">First Name:</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="" name="firstName">
+                            <label for="name1">Last Name:</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="" name="lastName">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" placeholder="" name="email">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pwd">New Password:</label>
+                            <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone-number">Phone number:</label>
+                            <input type="number" class="form-control" id="phoneNum" placeholder="" name="phoneNum">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="zip-code">Zip Code:</label>
+                            <input type="zip-code" class="form-control" id="location" placeholder="" name="location">
+                        </div>
+
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="remember"> Update my record</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">SAVE CHANGES</button>
+                    </form>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
