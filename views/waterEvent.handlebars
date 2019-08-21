@@ -7,7 +7,7 @@
       </div>
       <div class="row">
         <ul>
-        
+
           <li><strong>Client: </strong>{{firstName}} {{lastName}}</li>
           <li><strong>Zip code: </strong>{{location}}</li>
           <li><strong>Email: </strong>{{email}}</li>
@@ -55,43 +55,96 @@
             <!--Panel 7-->
             <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
               {{!-- <p class="h4 mb-4">Current Weather Conditions:</p> --}}
-              <p><strong>Temperature:</strong> <span id="currentTemp"></span>F</p>
-              <p><strong>Conditions:</strong> <span id="currentConditions"></span></p>
-              <p><strong>Humidity:</strong> <span id="humidity"></span>%</p>
-              <p><strong>Wind Speed:</strong> <span id="wind"></span></p>
-            </div>
-            <!--Panel 8-->
-            <div class="tab-pane fade in show " id="panel8" role="tabpanel">
-              {{!-- <p class="h4 mb-4">Upcoming Forecast</p> --}}
-            </div>
-            <!--/.Panel 8-->
-          </div>
-        </div> --}}
-
-        <div>
-            <p>Your FLOOD sensor was triggered. Please review the current and upcoming weather conditions; you may need to take action to prevent damage to your home.</p>
-            <p>Your FLOOD history to date:</p>
-            {{!-- INSERT TABLE DATA FROM CSV FILE --}}
-
-        </div>
-
+        <p><strong>Temperature:</strong> <span id="currentTemp"></span>F</p>
+        <p><strong>Conditions:</strong> <span id="currentConditions"></span></p>
+        <p><strong>Humidity:</strong> <span id="humidity"></span>%</p>
+        <p><strong>Wind Speed:</strong> <span id="wind"></span></p>
       </div>
-      <div class="row">
-        {{!-- add onclick event to icons for event-records --}}
-        <div class="img-circle" id="icon1" >
-          <img src="/assets/images/button-icons/air.png" align="middle">
+      <!--Panel 8-->
+      <div class="tab-pane fade in show " id="panel8" role="tabpanel">
+        {{!-- <p class="h4 mb-4">Upcoming Forecast</p> --}}
+      </div>
+      <!--/.Panel 8-->
+    </div>
+  </div> --}}
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-danger btn-lg" id="currentWeather">Current Weather Conditions</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="rightNow" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Current Weather Conditions</h4>
         </div>
-        <div class="img-circle" id="icon2">
-          <img src="/assets/images/button-icons/fire.png" align="middle">
+        <div class="modal-body">
+          <p><strong>Temperature:</strong> <span id="currentTemp"></span>F</p>
+          <p><strong>Conditions:</strong> <span id="currentConditions"></span></p>
+          <p><strong>Humidity:</strong> <span id="humidity"></span>%</p>
+          <p><strong>Wind Speed:</strong> <span id="wind"></span></p>
         </div>
-        <div class="img-circle" id="icon3">
-          <img src="/assets/images/button-icons/earth.png" align="middle">
-        </div>
-        <div class="img-circle" id="icon4">
-          <img src="/assets/images/button-icons/water.png" align="middle">
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
+
     </div>
   </div>
-</div>
 
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-danger btn-lg" id="futureWeather">Upcoming Weather Conditions</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="nextDays" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Upcoming Weather Conditions</h4>
+        </div>
+        <div class="modal-body">
+          <p><strong>Temperature:</strong> <span id="currentTemp"></span>F</p>
+          <p><strong>Conditions:</strong> <span id="currentConditions"></span></p>
+          <p><strong>Humidity:</strong> <span id="humidity"></span>%</p>
+          <p><strong>Wind Speed:</strong> <span id="wind"></span></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div>
+    <p>Your FLOOD sensor was triggered. Please review the current and upcoming weather conditions; you may need to take
+      action to prevent damage to your home.</p>
+    <p>Your FLOOD history to date:</p>
+    {{!-- INSERT TABLE DATA FROM CSV FILE --}}
+
+  </div>
+
+</div>
+<div class="row">
+  {{!-- add onclick event to icons for event-records --}}
+  <div class="img-circle" id="icon1">
+    <img src="/assets/images/button-icons/air.png" align="middle">
+  </div>
+  <div class="img-circle" id="icon2">
+    <img src="/assets/images/button-icons/fire.png" align="middle">
+  </div>
+  <div class="img-circle" id="icon3">
+    <img src="/assets/images/button-icons/earth.png" align="middle">
+  </div>
+  <div class="img-circle" id="icon4">
+    <img src="/assets/images/button-icons/water.png" align="middle">
+  </div>
+</div>
+</div>
+</div>
+</div>

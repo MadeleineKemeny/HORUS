@@ -28,13 +28,13 @@ module.exports = function(app) {
             }
         }).then(function(existingUser) {
             if (!existingUser) {
-                console.log('user NOT exists');
+                console.log('user DOES NOT exist');
                 db.User.create(req.body).then(function(dbUser) {
                     res.cookie("zipCode", dbUser.location)
                     res.render("userPage", dbUser.dataValues);
                 });
             } else {
-                console.log('user DOES exists');
+                console.log('user DOES exist');
                 res.send("404")
             }
         });
