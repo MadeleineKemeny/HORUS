@@ -1,12 +1,26 @@
 var db = require("../models");
 var weather = require("weather-js");
 var twilioClient = require('twilio')(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
+var colors = require("colors")
 
 module.exports = function(app) {
     // Get all examples
-    app.get("/api/examples", function(req, res) {
-        db.Example.findAll({}).then(function(dbExamples) {
-            res.json(dbExamples);
+    app.get("/api/event/water/:userid", function(req, res) {
+        var userid = req.params.userid;
+         
+        db.Sensor.findAll({
+            where:{
+                UserId : userid,
+                sensorType: "humidity",
+                sensorStatus:{$gt: 60}
+            }
+        }).then(function(dbSensor) {
+            console.log("dbSensor: ".red, dbSensor)
+            var objhdb = {
+                water: dbSensor
+            }
+           // console.log("objhdb: ".red, objhdb)
+            res.render("waterEvent", objhdb);
         });
     });
 

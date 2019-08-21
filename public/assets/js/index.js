@@ -38,12 +38,20 @@ var API = {
       }
     });
   },
-  getExamples: function () {
+
+  floodingAlert: function () {
+    var userid = 1    // this is temp, the userid needs to be in the cookies
     return $.ajax({
-      url: "api/examples",
-      type: "GET"
+      url: "api/event/water/" + userid,
+      type: "GET",
+      success: function (data) {
+       
+          $("body").html(data);
+        
+      }
     });
   },
+
   loginUser: function (user) {
     console.log(user)
     // return $.ajax({
@@ -225,14 +233,21 @@ var handleToggleLogIn = function () {
 var handleUpdateProfile = function () {
   console.log("going to update user profile");
 };
+
 var handleFloodingAlert = function () {
-  console.log("handle flooding alert");
+  API.floodingAlert().then(function (data) {
+    console.log("handle flooding alert");
+  })
+
 };
 var handleSensor = function () {
   API.testSensor().then(function (data) {
     console.log("hello", data)
   })
 };
+
+
+//
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
@@ -242,5 +257,7 @@ $("#register").on("click", handleToggleSignUp);
 $("#loginAccount").on("click", handleToggleLogIn);
 $("#test-send-message").on("click", handleTest);
 $("#update-user-profile").on("click", handleUpdateProfile);
-$("#flooding-alert").on("click", handleFloodingAlert);
+//$("#flooding-alert").on("click", handleFloodingAlert);
 $("#test-sensors").on("click", handleSensor)
+//
+$("#icon4").on("click", handleFloodingAlert)

@@ -126,7 +126,9 @@
       action to prevent damage to your home.</p>
     <p>Your FLOOD history to date:</p>
     {{!-- INSERT TABLE DATA FROM CSV FILE --}}
-
+    {{#each water}}
+    <p>{{sensorType}}: {{sensorStatus}}</p>
+    {{/each}}
   </div>
 
 </div>
