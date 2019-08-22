@@ -1,0 +1,131 @@
+<div class="container scroll">
+  {{!-- logo panel --}}
+  <div class="row">
+    <div class="col-md-4">
+      <div class="row">
+        <img src="/assets/images/logos/full-logo-tag.png" id="logo" alt="logo and tagline">
+      </div>
+      <div class="row">
+        <ul>
+          <li><strong>Client: </strong>{{firstName}} {{lastName}}</li>
+          <li><strong>Zip code: </strong>{{location}}</li>
+          <li><strong>Email: </strong>{{email}}</li>
+          <li><strong>Phone: </strong>{{phoneNum}}</li>
+        </ul>
+      </div>
+      <br>
+      {{!-- add onlick to user control buttons --}}
+      <div class="row" id="user-buttons">
+        <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+          <div class="btn-group mr-2" role="group" aria-label="First button">
+            <button type="button" class="user-controls"  id="update-profile" data-id="{{id}}">UPDATE<br>PROFILE</button>
+          </div>
+          <div class="btn-group mr-2" role="group" aria-label="Second button">
+            <button class="user-controls" id="test-sensor" data-id="{{phoneNum}}">TEST<br>SENSORS</button>
+          </div>
+          <div class="btn-group mr-2" role="group" aria-label="Third button">
+            <button class="user-controls" id="reset-profile">RESET<br>SENSOR</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{!-- main image panel --}}
+    <div class="col-md-8">
+      <div class="row" id="fire-background">
+        <div id="content-1">
+          <p><strong>Your FIRE sensor was triggered; this could indicate an active situation in your home.</strong> Please test your sensor to rensure it is working properly if no reports of fire danger are accessible for your location. Please review the current and upcoming weather
+            conditions; you may need to take action to prevent damage to your home.</p>
+
+          <div class="row">
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+              data-target="#currentWeather">Current Weather Conditions</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="currentWeather" role="dialog">
+              <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <div><button type="button" class="close" data-dismiss="modal">&times;</button></div>
+                    <p class="modal-title"><strong>Current Weather Conditions</strong></p>
+                  </div>
+                  <div class="modal-body">
+                    <p><strong>Temperature:</strong> <span id="currentTemp"></span>F</p>
+                    <p><strong>Conditions:</strong> <span id="currentConditions"></span></p>
+                    <p><strong>Humidity:</strong> <span id="humidity"></span>%</p>
+                    <p><strong>Wind Speed:</strong> <span id="wind"></span></p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+
+
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+              data-target="#futureWeather">Upcoming Weather Conditions</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="futureWeather" role="dialog">
+              <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <div><button type="button" class="close" data-dismiss="modal">&times;</button></div>
+                    <p class="modal-title"><strong>Future Weather Conditions</strong></p>
+                  </div>
+                  <div class="modal-body">
+                    <p><strong>Date:</strong> <span id="futureTemp"></span>F</p>
+                    <p><strong>Temperature:</strong> <span id="futureTemp"></span>F</p>
+                    <p><strong>Conditions:</strong> <span id="futureConditions"></span></p>
+                    <p><strong>Humidity:</strong> <span id="futureHumidity"></span>%</p>
+                    <p><strong>Wind Speed:</strong> <span id="futureWind"></span></p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+
+
+            <br>
+            <br>
+          </div>
+
+          <p><strong>Your FIRE history to date:</strong></p>
+          {{!-- INSERT TABLE DATA FROM CSV FILE --}}
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">sensorType</th>
+                <th scope="col">sensorStatus</th>
+                <th scope="col">createdAt</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each flame}}
+              <tr>
+                <td>{{sensorType}}</td>
+                <td>{{sensorStatus}}</td>
+                <td>{{createdAt}}</td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

@@ -230,19 +230,29 @@ var handleToggleSignUp = function () {
 var handleToggleLogIn = function () {
   $("#loginTab").click();
 };
+
 var handleUpdateProfile = function () {
-  console.log("going to update user profile");
+  $(document).ready(function(){
+    $("#update-profile").click(function(){
+      console.log("user wants to update profile")
+      // direct to userProfile.handlebars;
+    });
+  });
 };
 
-var handleFloodingAlert = function () {
-  API.floodingAlert().then(function (data) {
-    console.log("handle flooding alert");
-  })
 
+var handleReset = function () {
+  $(document).ready(function(){
+    $("#update-profile").click(function(){
+      console.log("reset triggered user sensors")
+      // direct to testing page;
+    });
+  });
 };
-var handleSensor = function () {
+
+var handleTest = function () {
   API.testSensor().then(function (data) {
-    console.log("hello", data)
+    console.log("Testing your sensor! Hello", data)
   })
 };
 
@@ -255,9 +265,9 @@ $("#signup").on("click", handleSignUp);
 $("#login").on("click", handleLogin);
 $("#register").on("click", handleToggleSignUp);
 $("#loginAccount").on("click", handleToggleLogIn);
-$("#test-send-message").on("click", handleTest);
-$("#update-user-profile").on("click", handleUpdateProfile);
+$("#test-sensor").on("click", handleTest);
+$("#update-profile").on("click", handleUpdateProfile);
 //$("#flooding-alert").on("click", handleFloodingAlert);
-$("#test-sensors").on("click", handleSensor)
+$("#reset-sensors").on("click", handleReset)
 //
 $("#icon4").on("click", handleFloodingAlert)
