@@ -52,6 +52,19 @@ var API = {
     });
   },
 
+  updateProfile: function () {
+    var userid = 1    
+    return $.ajax({
+      url: "api/updateProfile/" + userid,
+      type: "GET",
+      success: function (data) {
+       
+          $("body").html(data);
+        
+      }
+    });
+  },
+
   loginUser: function (user) {
     console.log(user)
     // return $.ajax({
@@ -232,12 +245,10 @@ var handleToggleLogIn = function () {
 };
 
 var handleUpdateProfile = function () {
-  $(document).ready(function(){
-    $("#update-profile").click(function(){
-      console.log("user wants to update profile")
-      // direct to userProfile.handlebars;
-    });
-  });
+  API.updateProfile().then(function(data){
+    console.log("update profile")
+  })
+   
 };
 
 
@@ -256,7 +267,11 @@ var handleTest = function () {
   })
 };
 
-
+var handleFloodingAlert =function(){
+  API.floodingAlert().then(function(data){
+    console.log("checking flood sensor")
+  }) 
+}
 //
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);

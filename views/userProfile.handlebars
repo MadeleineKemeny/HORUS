@@ -37,30 +37,31 @@
                     <h4>UPDATE YOUR PROFILE</h4>
                     <form action="/action_page.php">
                         <div class="form-group">
+                            {{firstName}}
                             <label for="name1">First Name:</label>
-                            <input type="text" class="form-control" id="firstName" placeholder="" name="firstName">
+                            <input type="text" class="form-control" id="firstName" placeholder="" name="firstName" value="{{firstName}}">
                             <label for="name1">Last Name:</label>
-                            <input type="text" class="form-control" id="lastName" placeholder="" name="lastName">
+                            <input type="text" class="form-control" id="lastName" placeholder="" name="lastName" value="{{lastName}}">
                         </div>
 
                         <div class="form-group">
                             <label for="email">Email:</label>
-                            <input type="email" class="form-control" id="email" placeholder="" name="email">
+                            <input type="email" class="form-control" id="email" placeholder="" name="email" value="{{email}}">
                         </div>
 
                         <div class="form-group">
                             <label for="pwd">New Password:</label>
-                            <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+                            <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="pwd" value="{{password}}">
                         </div>
 
                         <div class="form-group">
                             <label for="phone-number">Phone number:</label>
-                            <input type="number" class="form-control" id="phoneNum" placeholder="" name="phoneNum">
+                            <input type="number" class="form-control" id="phoneNum" placeholder="" name="phoneNum" value="{{phoneNum}}">
                         </div>
 
                         <div class="form-group">
                             <label for="zip-code">Zip Code:</label>
-                            <input type="zip-code" class="form-control" id="location" placeholder="" name="location">
+                            <input type="zip-code" class="form-control" id="location" placeholder="" name="location" value="{{location}}">
                         </div>
 
                         <div class="checkbox">

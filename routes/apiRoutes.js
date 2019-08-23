@@ -5,6 +5,19 @@ var colors = require("colors")
 const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
 module.exports = function(app) {
+
+    app.get("/api/updateProfile/:userid", function(req, res){
+        var userid = req.params.userid
+      
+        db.User.findAll({
+            where: {
+                id: userid
+            }
+        }).then(function(dbUser){
+            console.log("user: "+dbUser[0])
+           res.render("userProfile",dbUser[0])
+        })
+    })
     // Get all examples
     app.get("/api/event/water/:userid", function(req, res) {
         var userid = req.params.userid;
